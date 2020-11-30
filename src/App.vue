@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <Book
-      title='The Name of the Wind'
-      img_url='https://images-na.ssl-images-amazon.com/images/I/51JThzjy3gL._SX306_BO1,204,203,200_.jpg'
-      author='Patrick Rothfuss' />
+    <Book :title='title' :img_url='img_url' :author='author' />
     <router-view/>
   </div>
 </template>
