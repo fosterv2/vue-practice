@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <p>{{ message }}</p>
+    <Book/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Book from './components/Book'
+
 export default {
   name: 'App',
-  data () {
-    return {
-      message: 'Hello Vue!'
-    }
+  components: {
+    Book
   }
 }
 </script>
