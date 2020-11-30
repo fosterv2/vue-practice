@@ -22,16 +22,31 @@ export default {
   data () {
     return {
       books: [
-        {
-          id: 0,
-          title: 'The Name of the Wind',
-          img_url: 'https://images-na.ssl-images-amazon.com/images/I/51JThzjy3gL._SX306_BO1,204,203,200_.jpg',
-          author: 'Patrick Rothfuss'
-        }
+        // {
+        //   id: 0,
+        //   title: 'The Name of the Wind',
+        //   img_url: 'https://images-na.ssl-images-amazon.com/images/I/51JThzjy3gL._SX306_BO1,204,203,200_.jpg',
+        //   author: 'Patrick Rothfuss'
+        // }
       ]
     }
+  },
+  mounted: function () {
+    fetch('http://localhost:3000/books')
+      .then(resp => resp.json())
+      .then(books => {
+        this.books = books
+      })
   }
 }
+
+// const getBooks = () => {
+//   fetch('http://localhost:3000/books')
+//     .then(resp => resp.json())
+//     .then(books => {
+//       this.books = books
+//     })
+// }
 </script>
 
 <style>

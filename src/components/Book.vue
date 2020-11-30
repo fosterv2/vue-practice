@@ -1,8 +1,8 @@
 <template>
-  <div id="book">
-    <h3>{{ book.title }}</h3>
+  <div class="book">
+    <h3>{{ book.name }}</h3>
     <img :src='book.img_url'>
-    <p>By: {{ book.author }}</p>
+    <p>By: {{ book.author_name }}</p>
   </div>
 </template>
 
@@ -19,3 +19,7 @@ export default {
   }
 }
 </script>
+
+<style>
+
+</style>
