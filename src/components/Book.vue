@@ -21,5 +21,7 @@ export default {
 </script>
 
 <style>
-
+.book {
+  max-width: 300px;
+}
 </style>

@@ -2,11 +2,13 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <!-- <Book :title='title' :img_url='img_url' :author='author' /> -->
-    <Book
-      v-for='book in books'
-      :key='book.id'
-      :book='book'
-    />
+    <div class="books">
+      <Book
+        v-for='book in books'
+        :key='book.id'
+        :book='book'
+      />
+    </div>
     <router-view/>
   </div>
 </template>
@@ -57,5 +59,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.books {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 </style>
