@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <Book/>
+    <!-- <img src="./assets/logo.png"> -->
+    <Book
+      title='The Name of the Wind'
+      img_url='https://images-na.ssl-images-amazon.com/images/I/51JThzjy3gL._SX306_BO1,204,203,200_.jpg'
+      author='Patrick Rothfuss' />
     <router-view/>
   </div>
 </template>
@@ -13,6 +16,13 @@ export default {
   name: 'App',
   components: {
     Book
+  },
+  data () {
+    return {
+      title: 'The Name of the Wind',
+      img_url: 'https://images-na.ssl-images-amazon.com/images/I/51JThzjy3gL._SX306_BO1,204,203,200_.jpg',
+      author: 'Patrick Rothfuss'
+    }
   }
 }
 </script>

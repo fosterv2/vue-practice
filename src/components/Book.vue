@@ -9,12 +9,10 @@
 <script>
 export default {
   name: 'Book',
-  data () {
-    return {
-      title: 'The Name of the Wind',
-      img_url: 'https://images-na.ssl-images-amazon.com/images/I/51JThzjy3gL._SX306_BO1,204,203,200_.jpg',
-      author: 'Patrick Rothfuss'
-    }
+  props: {
+    title: String,
+    img_url: String,
+    author: String
   }
 }
 </script>
